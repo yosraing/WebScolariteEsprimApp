@@ -1,0 +1,44 @@
+﻿@model WebScolariteEsprimApp.Models.Course
+
+@{
+    ViewBag.Title = "ListeEtudiant";
+}
+
+<h2>ListeEtudiant</h2>
+
+<div>
+    <h4>Course</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Credits)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Credits)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <table>
+        <thead>
+        <td>aaa</td>
+        <td>bbbbb</td>
+        </thead>
+        @foreach(var item in Model.Enrollments )
+        <tr></tr>
+
+
+    </table>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CourseID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
